@@ -1,5 +1,6 @@
-﻿module ImplicitBuilder
+﻿namespace System
 
+[<Sealed>]
 type ImplicitBuilder() = 
 
     member inline this.Bind((x:'T), rest: 'U -> 'V) : 'V =
@@ -8,3 +9,6 @@ type ImplicitBuilder() =
 
     member this.Return(x:'T) = x
 
+[<AutoOpen>]
+module ImplicitBuilderImpl =
+    let implicit = ImplicitBuilder()

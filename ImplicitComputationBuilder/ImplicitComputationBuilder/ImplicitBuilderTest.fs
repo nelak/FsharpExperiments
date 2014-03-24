@@ -1,10 +1,8 @@
 ﻿module ImplicitBuilderTest
-open ImplicitBuilder
 open OpImplicit
+open System
 open System.Drawing
 open Xunit
-
-let implicit = ImplicitBuilder()
 
 [<Fact>]
 let ``Verirify implicit conversion to string``() = 
